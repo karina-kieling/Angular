@@ -1,0 +1,12 @@
+{
+  "users": [
+    {
+      "email": "karina@email.com",
+      "password": "$2a$10$TPiV9flWPm6uQ7u2p3dZf.QFKtjyXP8MaHa.E9IY/tmjA.BBJDp9i",
+      "nome": "Karina",
+      "idade": 23,
+      "id": 1
+    }
+  ],
+  "produtos": []
+}
