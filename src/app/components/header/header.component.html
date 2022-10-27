@@ -6,7 +6,10 @@
             <a href="#">Horários</a>
             <a href="#">Campeonatos</a>
             <a href="#">Resultados</a>
-            <a routerLink="/login">Login</a>
+
+
+            <a href="#" *ngIf="nome">{{nome}}</a>
+            <a routerLink="/login" *ngIf="!nome">Login</a>
 
         </nav>
         <a onclick="mostrarMenuJquery()" class="barras" href="#"><svg xmlns="http://www.w3.org/2000/svg"
