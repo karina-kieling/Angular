@@ -22,6 +22,17 @@ export class LoginComponent implements OnInit {
 
 
   receberDados(){
+    const blackList: string[] = ["select ","or ", "from ", "drop ","having ","group ", "by ", "insert ","exec ","\"","'",";","--","#","*"]
+
+    blackList.forEach(cadaPalavra => {
+      if (this.userModel.email?.toLowerCase().includes(cadaPalavra)) {
+        this.mensagem = "Dados Incorretos";
+
+        return;
+      }
+    })
+
+
     this.loginService.login(this.userModel).subscribe({
       next: (response) => { 
         console.log(response.body.user.nome) 
